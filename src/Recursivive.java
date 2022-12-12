@@ -91,4 +91,17 @@ public class Recursivive {
         counterCheck++;
         return checker(num);
     }
+
+    static int countLetters(String string, int size) {
+        size -= 1;
+        if (String.valueOf(string.charAt(size)).equals(String.valueOf(string.charAt(size)).toUpperCase())) {
+            counter++;
+        }
+        if (size == 0) {
+            int temp = counter;
+            counter = 0;
+            return temp;
+        }
+        return countLetters(string, size);
+    }
 }
